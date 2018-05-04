@@ -60,9 +60,14 @@ int main()
 	//My triangle vertices
 	GLfloat vertices[] =
 	{
+		/*First Triangle*/
 		-0.25f, -0.25f, 0.0f,
 		0.25f, -0.25f, 0.0f,
-		0.25f, 0.25f, 0.0f
+		0.25f, 0.25f, 0.0f,
+		/*Second Triangle*/
+		-0.25f, -0.25f, 0.0f,
+		0.25f, 0.25f, 0.0f,
+		-0.25f, 0.25f, 0.0f
 	};
 
 	
@@ -84,7 +89,7 @@ int main()
 	glVertexAttribPointer(0,3,GL_FLOAT,GL_FALSE, 3* sizeof(GLfloat), (GLvoid *) 0);
 	/*Enable Vertex Attribute*/
 	glEnableVertexAttribArray(0);
-	//
+	//Unbind VBO. VBO binding is stored in Attributes
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	//Unbind Vertex Array
 	glBindVertexArray(0);
@@ -103,7 +108,7 @@ int main()
 		/*Use this Shader program*/
 		myShader.UseShader();
 		glBindVertexArray(VAO);
-		glDrawArrays(GL_TRIANGLES,0, 3);
+		glDrawArrays(GL_TRIANGLES,0, 6);
 		glBindVertexArray(0);
 		/*swap double buffer*/
 		glfwSwapBuffers(window);
