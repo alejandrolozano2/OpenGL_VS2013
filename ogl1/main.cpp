@@ -1,3 +1,4 @@
+#if 0
 #include <iostream>
 #include <fstream>
 //#define GLEW_STATIC
@@ -133,7 +134,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 }
 
 
-
+#endif
 
 
 
