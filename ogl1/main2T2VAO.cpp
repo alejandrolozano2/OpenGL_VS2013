@@ -49,9 +49,9 @@ int main()
 	/*Set key callback function*/
 	glfwSetKeyCallback(window, key_callback);
 
-	Shader myShader;
+	Shader myShader, myShader2;
 	myShader.CreateProgram("Vertex.hlsl", "Frag.hlsl");
-
+	myShader2.CreateProgram("Vertex.hlsl", "FragBlue.hlsl");
 	//My triangle vertices
 	GLfloat vertices1[] =
 	{
@@ -122,10 +122,11 @@ int main()
 		/*Use this Shader program*/
 		myShader.UseShader();
 		glBindVertexArray(VAO[0]);
-		glDrawArrays(GL_TRIANGLES, 0, 6);
+		glDrawArrays(GL_TRIANGLES, 0, 3);
 
+		myShader2.UseShader();
 		glBindVertexArray(VAO[1]);
-		glDrawArrays(GL_TRIANGLES, 0, 6);
+		glDrawArrays(GL_TRIANGLES, 0, 3);
 		glBindVertexArray(0);
 
 		/*swap double buffer*/
