@@ -69,6 +69,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="main2T2VAO.cpp" />
+    <ClCompile Include="mainUniform.cpp" />
     <ClCompile Include="main_2T1VAO.cpp" />
     <ClCompile Include="Shader.cpp" />
   </ItemGroup>

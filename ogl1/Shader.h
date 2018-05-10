@@ -21,6 +21,7 @@ private:
 
 public:
 	GLint CreateProgram(const char *, const char *);
+	GLint getShader_program();
 	void UseShader();
 
 };

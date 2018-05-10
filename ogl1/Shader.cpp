@@ -90,6 +90,11 @@ GLint Shader::CreateShaderProgram()
 	return success;
 }
 
+GLint Shader::getShader_program()
+{
+	return shader_program;
+}
+
 void Shader::UseShader()
 {
 	glUseProgram(shader_program);
