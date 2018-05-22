@@ -4,6 +4,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include "Shader.h"
+#include <SOIL.h>
 
 // Window dimensions
 const GLuint WIDTH = 800, HEIGHT = 600;
